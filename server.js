@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // Configure CORS for Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:8080',
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST']
   }
 });
